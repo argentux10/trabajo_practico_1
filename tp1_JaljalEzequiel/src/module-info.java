@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author Ezequiel-PC
+ * @author Ezequiel Jaljal
  *
  */
 module tp1_JaljalEzequiel {
