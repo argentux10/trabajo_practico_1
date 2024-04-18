@@ -12,18 +12,18 @@ public class Main {
 			num=sc.nextInt();
 		}while(num <5 || num >10);
 		
-		String[] entero= new String[num];
-		for(int i=0; i<entero.length;i++) {
+		String[] str= new String[num];
+		for(int i=0; i<str.length;i++) {
 			System.out.println("Ingrese nombre: ");
-			entero[i]= sc.next();
+			str[i]= sc.next();
 		}
 		System.out.println("El array ha sido llenado con exito! El array sera mostrado a continuacion desde la posicion 0");
-		for(int i=0; i < entero.length;i++) {
-			System.out.println("Posicion: ["+i+"]: "+entero[i]);
+		for(int i=0; i < str.length;i++) {
+			System.out.println("Posicion: ["+i+"]: "+str[i]);
 		}
 		System.out.println("Se mostrara el arreglo en forma inversa, desde la ultima posicion");
-		for(int i=entero.length-1; i >= 0;i--) {
-			System.out.println("Posicion: ["+i+"]: "+entero[i]);
+		for(int i=str.length-1; i >= 0;i--) {
+			System.out.println("Posicion: ["+i+"]: "+str[i]);
 		}
 		sc.close();
 		
