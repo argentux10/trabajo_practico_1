@@ -26,7 +26,6 @@ public class Persona {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.fechaNacimiento = fechaNacimiento;
-		this.provincia = provincia;
 	}
 
 	public int getDni() {
