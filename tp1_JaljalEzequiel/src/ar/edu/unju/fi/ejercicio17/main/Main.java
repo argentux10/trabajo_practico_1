@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
@@ -13,7 +14,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		int op;
+		int opc=0;
 		Scanner sc = new Scanner(System.in);
 		List<Jugador> jugador = new ArrayList<>();
 
@@ -28,9 +29,13 @@ public class Main {
 			System.out.println("7) Mostrar la cantidad de jugadores que pertenezcan a una nacionalidad");
 			System.out.println("8) Salir");
 			System.out.println("Ingrese una opcion: ");
-			op= sc.nextInt();
+			try {
+				opc = sc.nextInt();
+			}catch(InputMismatchException e){
+				System.out.println("Valor invalido, ingrese un valor del 1 al 8");
+			}
 			boolean band = false;
-			switch(op) {
+			switch(opc) {
 				case 1:	
 							System.out.println("*** Alta de jugador ***");
 							
@@ -214,10 +219,8 @@ public class Main {
 				case 8:	
 							System.out.println("El programa ha finalizado");
 							break;
-				default:
-					System.out.println("Opcion incorrecta, ingrese nuevamente \n");
 			}
-		}while(op!=8);
+		}while(opc!=8);
 		sc.close();
 	}
 
